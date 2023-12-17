@@ -16,3 +16,10 @@ I have create RESTfull APIs .
 **second step**: then you need to install the npm i then node modules is install for your project .
 
 **third step**: then after first you need to start the server using npm start . and the start the client using npm start to see the interface. 
+ 
+ ## 
+<a href="https://github.com/pournimaanjole/patient-management/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=pournimaanjole/patient-management" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
