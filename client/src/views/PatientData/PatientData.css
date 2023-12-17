@@ -1,11 +1,16 @@
 .container{
     background-image: url(./../Login/login-background-img.jpg);
     background-size: cover;
-    height: 100vh;
+    height: 150vh;
 }
 
 .small-container{
     background: rgba(0, 0, 0, 0.658);
     height: 90%;
     width: 100%;
+    
+    
 }
+
+
+

@@ -1,0 +1,33 @@
+.patient-data{
+    border: 1px solid black;
+    height: 15rem;
+    width: 600px;
+   margin: 2rem auto;
+   
+
+}
+.display{
+    display: block;
+    margin: 1rem 2rem;
+}
+.patient{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.button{
+    border: 1px solid black;
+    font-size: 1.3rem;
+    font-weight: 500;
+position: relative;
+right: -22rem;
+top: -2rem;
+margin: 0 1rem;
+padding: 0.5rem 1rem;
+border-radius: 1rem;
+cursor: pointer;
+}
+.button:hover{
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}
