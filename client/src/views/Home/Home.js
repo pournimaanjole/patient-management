@@ -14,6 +14,13 @@ const Home = () => {
   useEffect(() => {
     getAllData();
   }, [])
+
+  const deletdata = async (id)=>{
+const response = await axios.delete(`/api/v1/patients/${id}`)
+if(response?.data?.data){
+  getAllData();
+}
+  }
   return (
     <div>
       <Navbar/>
@@ -21,7 +28,7 @@ const Home = () => {
       <div>
         {
           fetchdata?.map((data,index)=>{
-const {firstname,lastname,phoneNo,bloodGroup,gender,status,updatedAt,createdAt} = data
+const {firstname,lastname,phoneNo,bloodGroup,gender,status,updatedAt,createdAt,_id} = data
 return(<>
 <div key={index} className='patient-data'>
 <span className='display'> <span className='patient'>Patient Full Name:</span> {firstname} {lastname}</span>
@@ -30,7 +37,7 @@ return(<>
 <span className='display'> <span  className='patient'>Gender:</span> {gender}</span>
 <span className='display'> <span  className='patient'>Status data:</span> {status}</span> 
 {/* <span>Admit Date: {createdAt}</span>  */}
-<span className='button'>Delete</span> 
+<span className='button' onClick={()=>{deletdata(_id)}}>Delete</span> 
 <span className='button'>Update</span>
 
 </div>

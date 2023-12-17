@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 5000
 import healthgetAPI from './controlers/health.js';
 import { adminPostAPI,AdminLogin } from './controlers/admins.js';
 import { patientGetApi,patientPostApi } from './controlers/dataAdd.js';
+import patientDeletApi from './controlers/delete.js';
 
 const connectMongoDB = async ()=>{
 const conn = await mongoose.connect(process.env.MONGODB_URI);
@@ -36,6 +37,10 @@ app.post('/api/v1/patients', patientPostApi)
 // all patient data fetch
 
 app.get('/api/v1/patients' ,patientGetApi)
+
+// delete the patient data 
+
+app.delete('/api/v1/patients/:_id' , patientDeletApi)
 
 app.listen(PORT , ()=>{
     console.log("server is running " );
