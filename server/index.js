@@ -11,6 +11,7 @@ import healthgetAPI from './controlers/health.js';
 import { adminPostAPI,AdminLogin } from './controlers/admins.js';
 import { patientGetApi,patientPostApi } from './controlers/dataAdd.js';
 import patientDeletApi from './controlers/delete.js';
+import patientUpdatePutApi from './controlers/updatedata.js';
 
 const connectMongoDB = async ()=>{
 const conn = await mongoose.connect(process.env.MONGODB_URI);
@@ -44,7 +45,7 @@ app.delete('/api/v1/patients/:_id' , patientDeletApi)
 
 // update the patiednt dat 
 
-
+app.put('/api/v1/patients/:_id' ,patientUpdatePutApi)
 
 app.listen(PORT , ()=>{
     console.log("server is running " );
