@@ -17,10 +17,10 @@ const Home = () => {
 
   const deletdata = async (id)=>{
 const response = await axios.delete(`/api/v1/patients/${id}`)
-if(response?.data?.data){
   getAllData();
-}
   }
+
+  
   return (
     <div>
       <Navbar/>
@@ -38,7 +38,7 @@ return(<>
 <span className='display'> <span  className='patient'>Status data:</span> {status}</span> 
 {/* <span>Admit Date: {createdAt}</span>  */}
 <span className='button' onClick={()=>{deletdata(_id)}}>Delete</span> 
-<span className='button'>Update</span>
+<span className='button' >Update</span>
 
 </div>
 </>)

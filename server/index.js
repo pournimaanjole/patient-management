@@ -42,6 +42,10 @@ app.get('/api/v1/patients' ,patientGetApi)
 
 app.delete('/api/v1/patients/:_id' , patientDeletApi)
 
+// update the patiednt dat 
+
+
+
 app.listen(PORT , ()=>{
     console.log("server is running " );
    
